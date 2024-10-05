@@ -10,7 +10,7 @@ https://urgent-gwenni-juniarc-caaccaf6.koyeb.app/
 ### Get All Animals
 
 <details>
- <summary><code>GET</code> <code><b>/</b></code> <code>https://animalsurgent-gwenni-juniarc-caaccaf6.koyeb.app/animals</code></summary>
+ <summary><code>GET</code> <code><b>/</b></code> <code>https://urgent-gwenni-juniarc-caaccaf6.koyeb.app/animals</code></summary>
 
 ##### Responses
 
@@ -31,7 +31,7 @@ https://urgent-gwenni-juniarc-caaccaf6.koyeb.app/
 ### Get Animal by Id
 
 <details>
- <summary><code>GET</code> <code><b>/</b></code> <code>https://animalsurgent-gwenni-juniarc-caaccaf6.koyeb.app/animals/:id</code></summary>
+ <summary><code>GET</code> <code><b>/</b></code> <code>https://urgent-gwenni-juniarc-caaccaf6.koyeb.app/animals/:id</code></summary>
 
 ##### Parameters
 
@@ -54,7 +54,7 @@ id (Number)
 ### Add New Animal
 
 <details>
- <summary><code>POST</code> <code><b>/</b></code> <code>https://animalsurgent-gwenni-juniarc-caaccaf6.koyeb.app/animals/</code></summary>
+ <summary><code>POST</code> <code><b>/</b></code> <code>https://urgent-gwenni-juniarc-caaccaf6.koyeb.app/animals/</code></summary>
 
 
 ##### Body
@@ -81,7 +81,7 @@ id (Number)
 ### Edit Animal by Id
 
 <details>
- <summary><code>PUT</code> <code><b>/</b></code> <code>https://animalsurgent-gwenni-juniarc-caaccaf6.koyeb.app/animals/:id</code></summary>
+ <summary><code>PUT</code> <code><b>/</b></code> <code>https://urgent-gwenni-juniarc-caaccaf6.koyeb.app/animals/:id</code></summary>
 
 
 ##### Parameter
@@ -117,7 +117,7 @@ id (number)
 ### Delete Animal by Id
 
 <details>
- <summary><code>DELETE</code> <code><b>/</b></code> <code>https://animalsurgent-gwenni-juniarc-caaccaf6.koyeb.app/animals/:id</code></summary>
+ <summary><code>DELETE</code> <code><b>/</b></code> <code>https://urgent-gwenni-juniarc-caaccaf6.koyeb.app/animals/:id</code></summary>
 
 
 ##### Parameter
@@ -139,7 +139,7 @@ id (number)
 ### Get All Employees
 
 <details>
- <summary><code>GET</code> <code><b>/</b></code> <code>https://animalsurgent-gwenni-juniarc-caaccaf6.koyeb.app/employees</code></summary>
+ <summary><code>GET</code> <code><b>/</b></code> <code>https://urgent-gwenni-juniarc-caaccaf6.koyeb.app/employees</code></summary>
 
 ##### Responses
 
@@ -166,7 +166,7 @@ id (number)
 ### Get Employee by Id
 
 <details>
- <summary><code>GET</code> <code><b>/</b></code> <code>https://animalsurgent-gwenni-juniarc-caaccaf6.koyeb.app/employees/:id</code></summary>
+ <summary><code>GET</code> <code><b>/</b></code> <code>https://urgent-gwenni-juniarc-caaccaf6.koyeb.app/employees/:id</code></summary>
 
 ##### Parameters
 
@@ -189,7 +189,7 @@ id (Number)
 ### Add New Employee
 
 <details>
- <summary><code>POST</code> <code><b>/</b></code> <code>https://animalsurgent-gwenni-juniarc-caaccaf6.koyeb.app/employees</code></summary>
+ <summary><code>POST</code> <code><b>/</b></code> <code>https://urgent-gwenni-juniarc-caaccaf6.koyeb.app/employees</code></summary>
 
 
 ##### Body
@@ -215,7 +215,7 @@ id (Number)
 ### Edit Employee by Id
 
 <details>
- <summary><code>PUT</code> <code><b>/</b></code> <code>https://animalsurgent-gwenni-juniarc-caaccaf6.koyeb.app/employees/:id</code></summary>
+ <summary><code>PUT</code> <code><b>/</b></code> <code>https://urgent-gwenni-juniarc-caaccaf6.koyeb.app/employees/:id</code></summary>
 
 
 ##### Parameter
@@ -250,7 +250,7 @@ id (number)
 ### Delete Employee by Id
 
 <details>
- <summary><code>DELETE</code> <code><b>/</b></code> <code>https://animalsurgent-gwenni-juniarc-caaccaf6.koyeb.app/employees/:id</code></summary>
+ <summary><code>DELETE</code> <code><b>/</b></code> <code>https://urgent-gwenni-juniarc-caaccaf6.koyeb.app/employees/:id</code></summary>
 
 
 ##### Parameter
