@@ -1,6 +1,5 @@
 from flask import jsonify, request, Blueprint
 
-# from dataDummy.dataDummy import employee_db
 from utils.validation import validate_JSON_employees, validate_date
 from utils.responseMessages import ERROR_MESSAGES, SUCCES_MESSAGES
 from models.employees import Employees

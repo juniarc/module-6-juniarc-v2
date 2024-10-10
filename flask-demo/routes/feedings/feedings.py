@@ -1,5 +1,4 @@
 from flask import jsonify, request, Blueprint
-from sqlalchemy import text
 
 from models.feedings import Feedings
 from models.animals import Animals

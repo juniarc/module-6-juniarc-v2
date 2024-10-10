@@ -1,5 +1,4 @@
 from flask import jsonify, request, Blueprint
-from sqlalchemy import text
 
 from utils.validation import validate_JSON_animals
 from utils.responseMessages import SUCCES_MESSAGES, ERROR_MESSAGES
@@ -7,10 +6,6 @@ from models.animals import Animals
 from config.setting import db
 
 animals_bp = Blueprint('animals', __name__)
-
-def reset_sequence():
-    with db.engine.connect() as connection:
-        connection.execute(text("ALTER SEQUENCE public.animals_id_seq RESTART WITH 1;"))
 
 def create_animal(req_data):
     special_req = req_data.get('special_req', 'None')
@@ -65,9 +60,6 @@ def get_all_animals():
         is_valid, error_messages = validate_animal_data(req_data)
         if not is_valid:
             return jsonify({'error': error_messages}), 400
-        
-        if Animals.query.count() == 0:
-            reset_sequence()
 
         new_animal = create_animal(req_data)
 

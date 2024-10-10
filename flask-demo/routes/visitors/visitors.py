@@ -1,5 +1,4 @@
 from flask import jsonify, request, Blueprint
-from sqlalchemy import text
 
 from models.visitors import Visitors
 from config.setting import db
