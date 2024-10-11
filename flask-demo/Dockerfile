@@ -19,6 +19,8 @@ FROM base AS runtime
 WORKDIR /app
 COPY --from=build /app /app
 ENV PATH="/app/.venv/bin:$PATH"
+ENV POSTGRESS_CONNECTION_STRING=postgresql://postgres.lhziekmfiurtixhegwlq:6fZRHFg3dV85Tvo8@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres
+ENV TEST_POSTGRESS_CONNECTION_STRING=postgresql://postgres.kzurdwwbflrdvrrebnmq:bJzyt9HWNJ2hI5On@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres
 RUN echo "source /app/.venv/bin/activate" >> /etc/profile.d/venv.sh
 EXPOSE 5000
 
