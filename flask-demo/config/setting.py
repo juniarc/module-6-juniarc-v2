@@ -33,4 +33,3 @@ def create_app(settings_conf=None):
     migrate.init_app(app, db)
 
     return app
-
