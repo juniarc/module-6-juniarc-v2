@@ -97,7 +97,7 @@ def get_feeding_by_id(feeding_id):
 
         return jsonify({
             'message': SUCCES_MESSAGES['success_update_feeding'],
-            'animals': updated_feeding
+            'feeding': updated_feeding
         }), 201
     
     if request.method == 'DELETE':

@@ -93,7 +93,7 @@ def get_employee_by_id(employee_id):
 
         return jsonify({
             'message': SUCCES_MESSAGES['success_update_employee'],
-            'animals': updated_employee
+            'employees': updated_employee
         }), 201
     
     if request.method == 'DELETE':

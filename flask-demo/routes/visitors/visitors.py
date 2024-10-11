@@ -63,8 +63,8 @@ def get_all_visitors():
 
         return jsonify({
             'message': SUCCES_MESSAGES['success_add_visitor'],
-            'feeding': new_visitor
-        }), 200
+            'visitors': new_visitor
+        }), 201
     
 @visitors_bp.route('/<int:visitor_id>', methods=['GET', 'PUT', 'DELETE'])
 def get_visitor_by_id(visitor_id):
@@ -89,7 +89,7 @@ def get_visitor_by_id(visitor_id):
 
         return jsonify({
             'message': SUCCES_MESSAGES['success_update_visitor'],
-            'animals': updated_visitor
+            'visitors': updated_visitor
         }), 201
     
     if request.method == 'DELETE':

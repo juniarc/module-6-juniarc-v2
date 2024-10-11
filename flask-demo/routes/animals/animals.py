@@ -85,7 +85,7 @@ def get_animal_by_id(animal_id):
             return jsonify({'error': error_messages}), 400
         
         if animal is None:
-            return jsonify({'message': 'Animal is not found'}), 404
+            return jsonify({'message': ERROR_MESSAGES['animal_not_found']}), 404
         
         updated_animal = update_animal(animal, req_data)
 

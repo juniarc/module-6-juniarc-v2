@@ -44,7 +44,6 @@ def delete_enclosure(id):
     return jsonify({"message": SUCCES_MESSAGES['success_delete_enclosure']}), 200
 
 def validate_enclosure_data(req_data):
-    print('halo')
     if not req_data:
         return False, ERROR_MESSAGES['json_required']
     
@@ -72,8 +71,8 @@ def get_all_enclosures():
 
         return jsonify({
             'message': SUCCES_MESSAGES['success_add_enclosure'],
-            'feeding': new_enclosure
-        }), 200
+            'enclosures': new_enclosure
+        }), 201
 
 @enclosures_bp.route('/<int:enclosure_id>', methods=['GET', 'PUT', 'DELETE'])
 def get_enclosure_by_id(enclosure_id):
@@ -98,7 +97,7 @@ def get_enclosure_by_id(enclosure_id):
 
         return jsonify({
             'message': SUCCES_MESSAGES['success_update_enclosure'],
-            'animals': updated_enclosure
+            'enclosures': updated_enclosure
         }), 201
     
     if request.method == 'DELETE':

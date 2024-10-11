@@ -1,0 +1,32 @@
+name: CI-TEST
+on: pull_request
+
+jobs:
+  ci:
+    runs-on: ubuntu-22.04
+    services:
+      postgres:
+        image:  postgres:13
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_USER: kzurdwwbflrdvrrebnmq
+          POSTGRES_PASSWORD: bJzyt9HWNJ2hI5On
+          POSTGRES_DB: test_db
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+        with:
+          python-vesion: 3.11
+      - name: Run image
+        uses: abatilo/actions-poetry@v2
+        with:
+          poetry-version: 1.7.1
+      - name: install dependencies
+        working-directory: flask-demo
+        run: poetry install
+      - name: Run tests
+        working-directory: flask-demo
+        env:
+          TEST_POSTGRESS_CONNECTION_STRING: postgresql://postgres.kzurdwwbflrdvrrebnmq:bJzyt9HWNJ2hI5On@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres
+        run: poetry run pytest tests/
