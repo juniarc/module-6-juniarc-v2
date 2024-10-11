@@ -32,4 +32,5 @@ def create_app(settings_conf=None):
     db.init_app(app)
     migrate.init_app(app, db)
 
+    ## berubah
     return app
