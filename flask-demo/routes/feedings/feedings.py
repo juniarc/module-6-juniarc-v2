@@ -25,6 +25,17 @@ def create_feeding(req_data):
 
     return new_feeding.to_dict()
 
+def update_feeding(feeding, req_data):
+    feeding.animal_id = req_data.get('animal_id')
+    feeding.enclosure_id = req_data.get('enclosure_id')
+    feeding.food_type = req_data.get('food_type')
+    feeding.feeding_time = req_data.get('feeding_time')
+    feeding.reminder = req_data.get('reminder')
+
+    db.session.commit()
+
+    return feeding.to_dict()
+
 
 def validate_feeding_data(req_data):
     if not req_data:
@@ -94,7 +105,7 @@ def get_feeding_by_id(feeding_id):
         if feeding is None:
             return jsonify({'message': ERROR_MESSAGES['feeding_not_found']}), 404
         
-        updated_feeding = updated_feeding(feeding, req_data)
+        updated_feeding = update_feeding(feeding, req_data)
 
         return jsonify({
             'message': SUCCES_MESSAGES['success_update_feeding'],
